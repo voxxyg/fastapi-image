@@ -10,10 +10,7 @@ from firebase_admin import credentials, firestore, storage
 import firebase_admin
 from google.cloud import storage as gcs
 
-cred = credentials.Certificate('model/serviceAccount.json')
-# firebase_admin.initialize_app(cred)
-
-firebase_admin.initialize_app(cred, {
+firebase_admin.initialize_app(options={
     'storageBucket': 'coba-upload-foto'
 })
 db = firestore.client()
